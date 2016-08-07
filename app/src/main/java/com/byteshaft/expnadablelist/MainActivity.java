@@ -24,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
         listAdapter = new ExpandableListAdapter(getApplicationContext(), listDataHeader,
                 listDataChild);
         expListView.setAdapter(listAdapter);
+
     }
+
 
     private void prepareListData() {
         listDataHeader = new ArrayList<>();
