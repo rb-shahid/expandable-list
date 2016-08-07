@@ -31,15 +31,23 @@ public class Main2Activity extends AppCompatActivity {
 
         listView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
             @Override
-            public void onGroupCollapse(int i) {
+            public void onGroupCollapse(int groupPosition) {
                 System.out.println("Collapse");
+                Toast.makeText(getApplicationContext(),
+                        listDataHeader.get(groupPosition) + " Collapsed",
+                        Toast.LENGTH_SHORT).show();
+
             }
         });
 
         listView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
             @Override
-            public void onGroupExpand(int i) {
+            public void onGroupExpand(int groupPosition) {
                 System.out.println("Expand");
+                Toast.makeText(getApplicationContext(),
+                        listDataHeader.get(groupPosition) + " Expanded",
+                        Toast.LENGTH_SHORT).show();
+
             }
         });
 
